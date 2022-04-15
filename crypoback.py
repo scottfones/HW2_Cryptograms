@@ -35,15 +35,13 @@ def backtrack_word_search(
 
 def build_dict() -> dict[int, list[str]]:
     """Build a map of wordlength to list of words from a dictionary file."""
-    word_dict: dict[int, list[str]] = {}
-
     dict_file = Path("dictionary.txt")
-
     if not dict_file.exists():
         print("Error: File dictionary.txt not found.")
         sys.exit(1)
 
-    with open("dictionary.txt", "r") as f:
+    word_dict: dict[int, list[str]] = {}
+    with open(dict_file, "r") as f:
         for line in f:
             word = line.strip()
             word_len = len(word)
