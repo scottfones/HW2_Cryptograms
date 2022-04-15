@@ -53,12 +53,6 @@ def build_dict() -> dict[int, list[str]]:
     return word_dict
 
 
-def get_input() -> list[str]:
-    """Get input from the user and return as a list."""
-    input_str = input("Enter your words separated by spaces: ")
-    return input_str.strip().split()
-
-
 def is_good_cipher(decoded: str, encoded: str) -> bool:
     """Check if the decoded string is valid.
 
@@ -78,7 +72,7 @@ def is_good_cipher(decoded: str, encoded: str) -> bool:
 def main():
     """Initialize the program."""
     word_dict = build_dict()
-    user_list = get_input()
+    user_list = sys.argv[1:]
     results = backtrack_word_search(word_dict, [], user_list, 0, [])
     print(len(results))
     for res in results:
