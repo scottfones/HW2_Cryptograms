@@ -16,7 +16,7 @@ own now
 ```
 
 ```bash
-$ python crypoback.py nooa noka
+$ python cryptoback.py nooa noka
 5
 feet felt
 good gold
@@ -26,7 +26,7 @@ wood word
 ```
 
 ```bash
-$ python crypoback.py nttaemxeq etkkuey
+$ python cryptoback.py nttaemxeq etkkuey
 3
 woodchuck collect
 woodchuck connect
@@ -34,7 +34,7 @@ woodchuck correct
 ```
 
 ```bash
-$ python crypoback.py jack u cuaes
+$ python cryptoback.py jack u cuaes
 7
 bird a raise
 duck a cause
