@@ -2,7 +2,48 @@
 
 ## Usage
 
-python cryptoback.py
+python cryptoback.py WORDLIST
+
+### Example
+
+```bash
+$ python cryptoback.py gop pgo
+4
+are ear
+eat tea
+how who
+own now
+```
+
+```bash
+$ python crypoback.py nooa noka
+5
+feet felt
+good gold
+meet meat
+seed send
+wood word
+```
+
+```bash
+$ python crypoback.py nttaemxeq etkkuey
+3
+woodchuck collect
+woodchuck connect
+woodchuck correct
+```
+
+```bash
+$ python crypoback.py jack u cuaes
+7
+bird a raise
+duck a cause
+girl a raise
+grew a early
+grew a earth
+much a cause
+rule a laugh
+```
 
 ## Formal Problem Description
 
