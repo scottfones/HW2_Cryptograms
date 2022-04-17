@@ -1,10 +1,10 @@
 """CISC 320 - Programming Assignment 2 - Tester.
 
-This program constructs random encodings to test your program.
+This program constructs random encodings to test cryptograph decryption.
 """
 
-from string import ascii_lowercase
 from pathlib import Path
+from string import ascii_lowercase
 
 import argparse
 import random
@@ -45,12 +45,11 @@ def test_words(
 ) -> None:
     """Test a random string of given length."""
     decoded_list = []
-    for i in range(word_count):
+    for _ in range(word_count):
         words: int = random.choice(list(word_dict.keys()))
         word = random.choice(word_dict[words])
         decoded_list.append(word)
 
-    decoded = " ".join(decoded_list)
     encoded_list = []
     for word in decoded_list:
         encoded = ""
@@ -58,23 +57,28 @@ def test_words(
             encoded += cipher[c]
         encoded_list.append(encoded)
 
-    print(f"Looking for: {decoded}, with: {' '.join(encoded_list)} , ", end="")
+    decoded = " ".join(decoded_list)
+    encoded = " ".join(encoded_list)
+    print(f"Looking for: {decoded}, with: {encoded} , ", end="", flush=True)
     run_cap = subprocess.run(
-        f"python cryptoback.py {' '.join(encoded_list)}", shell=True,
+        f"python cryptoback.py {encoded}",
+        shell=True,
         capture_output=True,
         text=True,
     )
     if decoded in run_cap.stdout:
         print("Success")
     else:
-        print("Failure!")
+        print("...Failure...")
 
 
 def main():
     """Initialize the program."""
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--num_tests', type=int, default=5, help="number of tests")
-    parser.add_argument('-w', '--words', type=int, default=2, help="number of words")
+    parser.add_argument(
+        "-n", "--num_tests", type=int, default=5, help="number of tests"
+    )
+    parser.add_argument("-w", "--words", type=int, default=2, help="number of words")
     args = parser.parse_args()
 
     word_dict = build_dict()
