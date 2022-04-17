@@ -47,9 +47,11 @@ much a cause
 rule a laugh
 ```
 
-### Testing Progam
+### Testing Program
 
 `python crypto_tester.py -n 5 -w 9`
+
+The testing program creates a random cipher for each round. It then selects random words from the dictionary and encodes them. Finally, it runs the solver and looks for the decoded words in the output.
 
 ### Example
 
