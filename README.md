@@ -45,6 +45,32 @@ much a cause
 rule a laugh
 ```
 
+`python crypto_tester.py -n 5 -w 9`
+
+```bash
+Testing Rounds: 5, Words Per Round: 9
+
+Encrypted: dv vgs rturm fir urlprmduymr pmqhizr d urlprmduymr ks
+Decrypted: as sky enter lie temperature provide a temperature by
+Result: Success
+
+Encrypted: akvczs luc g nsrbsyvnoys lbsyvns v g svhs rsvhoys
+Decrypted: change own i temperature operate a i ease measure
+Result: Success
+
+Encrypted: jmlsmhfjyhm jmlsmhfjyhm vmj cbnwrjrbn vrem fj hmshmumnj f ubn
+Decrypted: temperature temperature let condition like at represent a son
+Result: Success
+
+Encrypted: u ceonjzz ejkjklje hjej lejmq csmug wmssjx ot pooqnhfnv
+Decrypted: i process remember here bread plain valley of woodchuck
+Result: Success
+
+Encrypted: xeni yhbxc vhbzctz leazcn zcuvchozphc zcuvchozphc tovzoen hcmpehc ylbk
+Decrypted: kind broke protect listen temperature temperature captain require blow
+Result: Success
+```
+
 ## Formal Problem Description
 
 ### Problem
