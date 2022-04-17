@@ -2,6 +2,8 @@
 
 ## Usage
 
+### Cryptogram Solver
+
 `python cryptoback.py WORDLIST`
 
 ### Example
@@ -45,7 +47,11 @@ much a cause
 rule a laugh
 ```
 
+### Testing Progam
+
 `python crypto_tester.py -n 5 -w 9`
+
+### Example
 
 ```bash
 Testing Rounds: 5, Words Per Round: 9
