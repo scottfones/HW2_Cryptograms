@@ -2,7 +2,7 @@
 
 ## Usage
 
-python cryptoback.py WORDLIST
+`python cryptoback.py WORDLIST`
 
 ### Example
 
