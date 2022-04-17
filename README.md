@@ -6,7 +6,7 @@
 
 `python cryptoback.py WORDLIST`
 
-### Example
+### Solver Examples
 
 ```bash
 $ python cryptoback.py gop pgo
@@ -53,7 +53,7 @@ rule a laugh
 
 The testing program creates a random cipher for each round. It then selects random words from the dictionary and encodes them. Finally, it runs the solver and looks for the decoded words in the output.
 
-### Example
+### Testing Example
 
 ```bash
 Testing Rounds: 5, Words Per Round: 9
