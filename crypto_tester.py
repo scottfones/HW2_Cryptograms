@@ -59,7 +59,9 @@ def test_words(
 
     decoded = " ".join(decoded_list)
     encoded = " ".join(encoded_list)
-    print(f"Looking for: {decoded}, with: {encoded} , ", end="", flush=True)
+    print(f"\nEncrypted: {encoded}")
+    print(f"Decrypted: {decoded}")
+    print(f"Result: ", end="", flush=True)
     run_cap = subprocess.run(
         f"python cryptoback.py {encoded}",
         shell=True,
@@ -69,7 +71,7 @@ def test_words(
     if decoded in run_cap.stdout:
         print("Success")
     else:
-        print("...Failure...")
+        print("Failure")
 
 
 def main():
@@ -83,6 +85,7 @@ def main():
 
     word_dict = build_dict()
 
+    print(f"Testing Rounds: {args.num_tests}, Words Per Round: {args.words}")
     for _ in range(args.num_tests):
         cipher = construct_cipher()
         test_words(cipher, args.words, word_dict)
