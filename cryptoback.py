@@ -14,7 +14,7 @@ def backtrack_word_search(
     """Perform backtracking search through the dictionary to find valid decryptions."""
     results = []
     for word in word_dict[len(user_list[user_index])]:
-        encoded = " ".join(user_list[:user_index+1])
+        encoded = " ".join(user_list[: user_index + 1])
         decoded = " ".join(word_chain + [word])
         if is_good_cipher(encoded, decoded):
             if user_index + 1 == len(user_list):
