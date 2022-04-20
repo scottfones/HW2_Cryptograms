@@ -16,7 +16,7 @@ def backtrack_word_search(
     for word in word_dict[len(user_list[user_index])]:
         encoded = " ".join(user_list[: user_index + 1])
         decoded = " ".join(word_chain + [word])
-        if is_good_cipher(encoded, decoded):
+        if is_good_cipher(decoded, encoded):
             if user_index + 1 == len(user_list):
                 results.append(decoded)
             else:
@@ -40,7 +40,7 @@ def build_dict() -> dict[int, list[str]]:
         sys.exit(1)
 
     word_dict: dict[int, list[str]] = {}
-    with open(dict_file, "r") as f:
+    with open(dict_file, "r", encoding="utf-8") as f:
         for line in f:
             word = line.strip()
             word_len = len(word)

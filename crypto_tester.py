@@ -20,7 +20,7 @@ def build_dict() -> dict[int, list[str]]:
         sys.exit(1)
 
     word_dict: dict[int, list[str]] = {}
-    with open(dict_file, "r") as f:
+    with open(dict_file, "r", encoding="utf-8") as f:
         for line in f:
             word = line.strip()
             word_len = len(word)
@@ -32,7 +32,7 @@ def build_dict() -> dict[int, list[str]]:
 
 def construct_cipher() -> dict[str, str]:
     """Construct a random cipher."""
-    cipher = {}
+    cipher: dict[str, str] = {}
     targets = list(ascii_lowercase)
     for c in list(ascii_lowercase):
         t = targets.pop(random.randrange(len(targets)))
@@ -61,11 +61,11 @@ def test_words(
     encoded = " ".join(encoded_list)
     print(f"\nEncrypted: {encoded}")
     print(f"Decrypted: {decoded}")
-    print(f"Result: ", end="", flush=True)
+    print("Result: ", end="", flush=True)
     run_cap = subprocess.run(
-        f"python cryptoback.py {encoded}",
-        shell=True,
+        ["python", "cryptoback.py"] + encoded_list,
         capture_output=True,
+        check=True,
         text=True,
     )
     if decoded in run_cap.stdout:
