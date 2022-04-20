@@ -1,4 +1,4 @@
-name: Lint
+name: Black Style Check 
 
 on: [push, pull_request]
 
