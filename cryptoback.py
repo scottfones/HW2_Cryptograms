@@ -53,7 +53,8 @@ def build_dict() -> dict[int, list[str]]:
 def is_good_cipher(decoded: str, encoded: str) -> bool:
     """Check if the decoded string is valid.
 
-    Create a map for each indexed position. A valid decoding must be a one-to-one mapping.
+    Create a map for each indexed position.
+    A valid decoding must be a one-to-one mapping.
     """
     cipher_map: dict[str, str] = {}
     for (enc, dec) in zip(encoded, decoded):
