@@ -1,12 +1,5 @@
 name: Bandit
-on:
-  pull_request:
-  push:
-    branches:
-      - master #dev, release, etc.
-  release:
-    types:
-      - created
+on: [push, pull_request]
 
 jobs:
   bandit:
